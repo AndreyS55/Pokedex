@@ -1,4 +1,5 @@
 const path = require('path');
+const webpack = require('webpack');
 
 var config = {
   entry: ["@babel/polyfill", './src/index.jsx'],
@@ -10,7 +11,8 @@ var config = {
   devServer: {
     contentBase: './public',
     open: true,
-    port: 3030
+    port: 3030,
+    hot: true
   },
   resolve: {
     extensions: ['.js', '.jsx', '.scss'],
@@ -26,7 +28,7 @@ var config = {
       },
       {
         test: /\.scss$/,
-        include: [path.resolve(__dirname, 'js')],
+        include: [path.resolve(__dirname, 'src')],
         use: [
           { loader: 'style-loader' },
           {
@@ -41,19 +43,6 @@ var config = {
         ]
       },
       {
-        test: /\.scss$/,
-        exclude: [path.resolve(__dirname, 'js')],
-        use: [
-          { loader: 'style-loader',
-            options: {
-              insertAt: 'top'
-            }
-          },
-          { loader: 'css-loader' },
-          { loader: 'sass-loader' }
-        ]
-      },
-      {
         test: /\.(png|svg|jpg|gif)$/,
         use: ['file-loader']
       },
@@ -63,6 +52,9 @@ var config = {
       }
     ]
   },
+  plugins: [
+    new webpack.HotModuleReplacementPlugin()
+  ]
 };
 
 module.exports = (env, argv) => {
