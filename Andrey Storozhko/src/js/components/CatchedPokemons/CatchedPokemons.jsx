@@ -1,8 +1,8 @@
 import React from 'react';
 
-import styles from './CatchedCards.scss';
+import styles from './CatchedPokemons.scss';
 
-const CatchedCards = () => (
+const CatchedPokemons = () => (
   <ul>
     <li key={1}>Catched 1</li>
     <li key={2}>Catched 2</li>
@@ -10,4 +10,4 @@ const CatchedCards = () => (
   </ul>
 );
 
-export default CatchedCards;
+export default CatchedPokemons;
