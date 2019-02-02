@@ -1,4 +1,4 @@
-import { POST_POKEMONS_SUCCESS } from '../actions/pokemonsActions';
+import { POST_POKEMONS_SUCCESS } from '../actions/catchPokemonActions';
 
 const catchedPokemons = (state = [], action) => {
   switch (action.type) {
