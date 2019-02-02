@@ -1,3 +1,5 @@
+@import './styles/preloader.scss';
+
 * {
   margin: 0;
   padding: 0;
@@ -30,13 +32,14 @@ ul {
 
 a {
   text-decoration: none;
+  color: inherit;
 }
 
 button {
-  border: none;
+  //border: none;
   outline: none;
-  font: inherit;
-  color: inherit;
-  background-color: transparent;
+  //font: inherit;
+  //color: inherit;
+  //background-color: transparent;
   cursor: pointer;
 }

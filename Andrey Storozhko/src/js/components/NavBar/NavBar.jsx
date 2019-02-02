@@ -5,8 +5,8 @@ import styles from './NavBar.scss';
 
 const NavBar = () => (
   <nav className={styles.header__nav}>
-    <Link to='/'>All pokemons</Link>
-    <Link to='/catched'>Catched pokemons</Link>
+    <Link to='/' className={styles.nav__all}>All pokemons</Link>
+    <Link to='/catched' className={styles.nav__catched}>Catched pokemons</Link>
   </nav>
 );
 
