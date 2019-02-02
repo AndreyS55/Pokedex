@@ -3,3 +3,13 @@
   flex-flow: row wrap;
   justify-content: space-around;
 }
+
+.loadMore {
+  align-self: center;
+  margin: 10px;
+  padding: 10px;
+}
+
+.isLoading {
+  background: #0074D9;
+}

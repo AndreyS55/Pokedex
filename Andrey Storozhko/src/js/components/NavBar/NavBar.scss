@@ -1,3 +1,14 @@
 .header__nav {
   display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  color: #fff;
+}
+
+.nav__all {
+  padding: 10px;
+}
+
+.nav__catched {
+  padding: 10px;
 }

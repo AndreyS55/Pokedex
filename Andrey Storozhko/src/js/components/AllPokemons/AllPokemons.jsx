@@ -1,32 +1,49 @@
 import React from 'react';
-import { connect } from "react-redux";
-import { fetchPokemons } from '../../actions/getPokemonsAction';
+import {connect} from "react-redux";
+import classNames from 'classnames';
+import { fetchPokemons, unmountComponent, loadMore } from '../../actions/pokemonsActions';
 import Card from '../Card/Card';
 import styles from './AllPokemons.scss';
 
 class AllPokemons extends React.Component {
   componentDidMount() {
-    this.props.fetchPokemons('http://localhost:3000/pokemons?_page=1&_limit=100')
+    const { limit, page } = this.props;
+    this.props.fetchPokemons(page, limit);
   }
 
+  componentWillUnmount() {
+    this.props.unmountComponent();
+  }
+
+  handleLoad = () => {
+    const {limit, page } = this.props;
+    this.props.loadMore();
+
+  };
+
   render() {
-    if(this.props.error) {
+    const {error, isLoading} = this.props;
+    if (this.props.error) {
       return <h2>Sorry! There was an error loading the items</h2>
     }
 
-    if(this.props.isLoading) {
-      return <h2>LOADING...</h2>
-    }
-
     return (
-      <ul className={styles.pokemons}>
-        {this.props.pokemons.map(pokemon => (
-          <Card key={pokemon.id}
-                id={pokemon.id}
-                name={pokemon.name}
-          />
-        ))}
-      </ul>
+      <React.Fragment>
+        <ul className={styles.pokemons}>
+          {this.props.pokemons.map(pokemon => (
+            <Card key={pokemon.id}
+                  id={pokemon.id}
+                  name={pokemon.name}
+            />
+          ))}
+        </ul>
+        <div className={classNames({[styles.isLoading]: isLoading})}>
+          <div className="loading">
+            <div className="pokeball normal" id="normal"></div>
+          </div>
+        </div>
+        {this.props.haveMore ? <button onClick={this.handleLoad} className={styles.loadMore}>Load More</button> : null}
+      </React.Fragment>
     )
   }
 }
@@ -35,12 +52,17 @@ const mapStateToProps = (state) => {
   return {
     pokemons: state.pokemons.items,
     error: state.pokemons.error,
-    isLoading: state.pokemons.isLoading
+    isLoading: state.pokemons.isLoading,
+    limit: state.pokemons.limit,
+    page: state.pokemons.page,
+    haveMore: state.pokemons.haveMore
   };
 };
 
 const mapDispatchToProps = (dispatch) => ({
-  fetchPokemons: (url) => dispatch(fetchPokemons(url))
+  fetchPokemons: (page, limit) => dispatch(fetchPokemons(page, limit)),
+  unmountComponent: () => dispatch(unmountComponent()),
+  loadMore: () => dispatch(loadMore())
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(AllPokemons);

@@ -1,7 +1,7 @@
 import { applyMiddleware, createStore } from 'redux';
 import thunk from 'redux-thunk';
-import rootReducer from '../reducers';
 import { composeWithDevTools } from 'redux-devtools-extension';
+import rootReducer from '../reducers';
 
 const configureStore = (initialState = {}) => {
   const store = createStore(
@@ -11,10 +11,10 @@ const configureStore = (initialState = {}) => {
   );
 
   if (process.env.NODE_ENV !== 'production' && module.hot) {
-    module.hot.accept('../reducers', () => store.replaceReducer(rootReducer))
+    module.hot.accept('../reducers', () => store.replaceReducer(rootReducer));
   }
 
-  return store
+  return store;
 };
 
 export default configureStore;
