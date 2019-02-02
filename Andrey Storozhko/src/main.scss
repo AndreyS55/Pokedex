@@ -1,4 +1,4 @@
-@import './styles/preloader.scss';
+@import '~normalize.css/normalize.css';
 
 * {
   margin: 0;
@@ -36,10 +36,5 @@ a {
 }
 
 button {
-  //border: none;
   outline: none;
-  //font: inherit;
-  //color: inherit;
-  //background-color: transparent;
-  cursor: pointer;
 }

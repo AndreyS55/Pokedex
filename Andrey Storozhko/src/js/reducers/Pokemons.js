@@ -10,7 +10,7 @@ const initialState = {
   items: [],
   isLoading: false,
   error: null,
-  limit: 5,
+  limit: 10,
   page: 1,
   haveMore: null
 };
@@ -44,7 +44,6 @@ const pokemons = (state = initialState, action) => {
         items: [],
         isLoading: false,
         error: null,
-        limit: 5,
         page: 1,
         haveMore: null
       };
