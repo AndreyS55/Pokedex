@@ -12,6 +12,7 @@
     "quotes": [2, "single"],
     "semi": [2, "always"],
     "no-console": "warn",
+    "object-curly-spacing": ["error", "always"],
     "linebreak-style": ["error", "windows"],
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
     "import/no-extraneous-dependencies": ["error", {"devDependencies": true}]

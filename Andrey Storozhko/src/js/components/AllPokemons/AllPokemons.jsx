@@ -1,8 +1,9 @@
 import React from 'react';
-import {connect} from "react-redux";
-import classNames from 'classnames';
+import { connect } from 'react-redux';
 import { fetchPokemons, unmountComponent, loadMore } from '../../actions/pokemonsActions';
 import Card from '../Card/Card';
+import LoadMoreButton from '../LoadMoreButton/LoadMoreButton';
+import Preloader from '../Preloader/Preloader';
 import styles from './AllPokemons.scss';
 
 class AllPokemons extends React.Component {
@@ -16,14 +17,12 @@ class AllPokemons extends React.Component {
   }
 
   handleLoad = () => {
-    const {limit, page } = this.props;
     this.props.loadMore();
-
   };
 
   render() {
-    const {error, isLoading} = this.props;
-    if (this.props.error) {
+    const { error, isLoading, haveMore } = this.props;
+    if (error) {
       return <h2>Sorry! There was an error loading the items</h2>
     }
 
@@ -37,12 +36,8 @@ class AllPokemons extends React.Component {
             />
           ))}
         </ul>
-        <div className={classNames({[styles.isLoading]: isLoading})}>
-          <div className="loading">
-            <div className="pokeball normal" id="normal"></div>
-          </div>
-        </div>
-        {this.props.haveMore ? <button onClick={this.handleLoad} className={styles.loadMore}>Load More</button> : null}
+        <Preloader isLoading={isLoading}/>
+        <LoadMoreButton haveMore={haveMore} handleLoad={this.handleLoad}/>
       </React.Fragment>
     )
   }
