@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { fetchPokemons, unmountComponent, loadMore } from '../../actions/pokemonsActions';
+import { catchPokemon } from "../../actions/catchPokemonActions";
 import Card from '../Card/Card';
 import LoadMoreButton from '../LoadMoreButton/LoadMoreButton';
 import Preloader from '../Preloader/Preloader';
@@ -21,7 +22,7 @@ class AllPokemons extends React.Component {
   };
 
   render() {
-    const { error, isLoading, haveMore } = this.props;
+    const { error, isLoading, haveMore, pokemons, catched } = this.props;
     if (error) {
       return <h2>Sorry! There was an error loading the items</h2>
     }
@@ -29,10 +30,12 @@ class AllPokemons extends React.Component {
     return (
       <React.Fragment>
         <ul className={styles.pokemons}>
-          {this.props.pokemons.map(pokemon => (
+          {pokemons.map(pokemon => (
             <Card key={pokemon.id}
                   id={pokemon.id}
                   name={pokemon.name}
+                  catchPokemon={this.props.catchPokemon}
+                  catched={catched}
             />
           ))}
         </ul>
@@ -50,14 +53,16 @@ const mapStateToProps = (state) => {
     isLoading: state.pokemons.isLoading,
     limit: state.pokemons.limit,
     page: state.pokemons.page,
-    haveMore: state.pokemons.haveMore
+    haveMore: state.pokemons.haveMore,
+    catched: state.catchedPokemons
   };
 };
 
 const mapDispatchToProps = (dispatch) => ({
   fetchPokemons: (page, limit) => dispatch(fetchPokemons(page, limit)),
   unmountComponent: () => dispatch(unmountComponent()),
-  loadMore: () => dispatch(loadMore())
+  loadMore: () => dispatch(loadMore()),
+  catchPokemon: (opts) => dispatch(catchPokemon(opts))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(AllPokemons);
