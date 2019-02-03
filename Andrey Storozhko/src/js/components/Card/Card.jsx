@@ -1,20 +1,41 @@
 import React from 'react';
 import CatchButton from '../CatchButton/CatchButton';
 import PokemonInfo from '../PokemonInfo/PokemonInfo';
-import noImage from '../../../img/no-image.png';
+import PokemonImage from '../PokemonImage/PokemonImage';
+import { fetchSinglePokemon, unmountComponentSingle } from '../../actions/singlePokemonActions';
 
 import styles from './Card.scss';
+import {connect} from "react-redux";
 
-const Card = (props) => {
-  const imgPath = props.id < 721 ? require(`../../../../pokemons/${props.id}.png`) : noImage;
-  return (
-    <li className={styles.pokemons__item}>{/*TODO*/}
-      {/*<PokemonInfo />*/}
-      <img src={imgPath} className={styles.pokemons__image} alt='Pokemon avatar' onClick={props.getInfo}/>
-      <div>{ props.name }</div>
-      <CatchButton name={props.name} id={props.id} catchPokemon={props.catchPokemon} date={props.date} catched={props.catched}/>
-    </li>
-  )
-};
+class Card extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      isOpen: false
+    }
+  }
 
-export default Card;
+  handleOpen = () => {
+    this.setState({isOpen: !this.state.isOpen})
+  };
+
+  render() {
+    const { id, name, catchPokemon, date, catched } = this.props;
+    return (
+      <li className={styles.pokemonsItem}>
+        {this.state.isOpen ? <PokemonInfo id={id} handleOpen={this.handleOpen}/> : null}
+        <PokemonImage id={id} handleOpen={this.handleOpen}/>
+        <div>{ name }</div>
+        <CatchButton name={name} id={id} catchPokemon={catchPokemon} date={date} catched={catched}/>
+      </li>
+    )
+  }
+}
+
+const mapDispatchToProps = (dispatch) => ({
+  fetchSinglePokemon: (id) => dispatch(fetchSinglePokemon(id)),
+  unmountComponentSingle: () => dispatch(unmountComponentSingle())
+});
+
+export default connect(null, mapDispatchToProps)(Card);
+// export default Card;

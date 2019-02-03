@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { fetchPokemons, unmountComponent, loadMore, catchPokemon } from '../../actions/pokemonsActions';
+import { fetchPokemons, unmountComponent, loadMore, catchPokemon } from '../../actions/allPokemonsActions';
 import Card from '../Card/Card';
 import LoadMoreButton from '../LoadMoreButton/LoadMoreButton';
 import Preloader from '../Preloader/Preloader';
@@ -31,7 +31,6 @@ class AllPokemons extends React.Component {
                   name={pokemon.name}
                   catchPokemon={this.props.catchPokemon}
                   catched={pokemon.catched}
-                  getInfo={this.getInfo}
             />
           ))}
         </ul>

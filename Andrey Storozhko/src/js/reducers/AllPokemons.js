@@ -4,7 +4,7 @@ import {
   FETCH_POKEMONS_FAILURE,
   UNMOUNT_COMPONENT,
   LOAD_MORE
-} from '../actions/pokemonsActions';
+} from '../actions/allPokemonsActions';
 
 const initialState = {
   pokemons: [],
