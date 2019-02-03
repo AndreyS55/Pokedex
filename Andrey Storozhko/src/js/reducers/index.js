@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux';
-import pokemons from './Pokemons';
+import allPokemons from './AllPokemons';
 import catchedPokemons from './CatchedPokemons';
 
 export default combineReducers({
-  pokemons,
+  allPokemons,
   catchedPokemons
 });

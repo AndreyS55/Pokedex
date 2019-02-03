@@ -7,15 +7,15 @@ import {
 } from '../actions/pokemonsActions';
 
 const initialState = {
-  items: [],
+  pokemons: [],
   isLoading: false,
   error: null,
-  limit: 10,
+  limit: 50,
   page: 1,
   haveMore: null
 };
 
-const pokemons = (state = initialState, action) => {
+const allPokemons = (state = initialState, action) => {
   switch (action.type) {
     case FETCH_POKEMONS_REQUEST:
       return {
@@ -27,7 +27,7 @@ const pokemons = (state = initialState, action) => {
       return {
         ...state,
         isLoading: false,
-        items: [...state.items, ...action.pokemons],
+        pokemons: [...state.pokemons, ...action.pokemons],
         haveMore: action.pokemons.length >= state.limit
       };
 
@@ -41,7 +41,7 @@ const pokemons = (state = initialState, action) => {
     case UNMOUNT_COMPONENT:
       return {
         ...state,
-        items: [],
+        pokemons: [],
         isLoading: false,
         error: null,
         page: 1,
@@ -59,4 +59,4 @@ const pokemons = (state = initialState, action) => {
   }
 };
 
-export default pokemons;
+export default allPokemons;
