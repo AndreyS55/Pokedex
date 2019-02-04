@@ -8,7 +8,8 @@ import {
 const initialState = {
   pokemon: {},
   isLoading: false,
-  error: null
+  error: null,
+  isOpen: false
 };
 
 const singlePokemon = (state = initialState, action) => {
@@ -23,6 +24,7 @@ const singlePokemon = (state = initialState, action) => {
       return {
         ...state,
         isLoading: false,
+        isOpen: true,
         pokemon: action.pokemon
       };
 
@@ -38,7 +40,8 @@ const singlePokemon = (state = initialState, action) => {
         ...state,
         pokemon: {},
         isLoading: false,
-        error: null
+        error: null,
+        isOpen: false
       };
 
     default:
