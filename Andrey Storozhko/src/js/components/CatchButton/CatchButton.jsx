@@ -8,7 +8,8 @@ class CatchButton extends React.Component {
     }
   }
 
-  catchPokemon = () => {
+  catchPokemon = (e) => {
+    e.stopPropagation();
     this.setState({isDisable: !this.state.isDisable}, this.props.catchPokemon(
       {
         name: this.props.name,

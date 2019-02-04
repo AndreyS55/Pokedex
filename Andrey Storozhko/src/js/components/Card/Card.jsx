@@ -1,18 +1,16 @@
 import React from 'react';
 import CatchButton from '../CatchButton/CatchButton';
-import PokemonInfo from '../PokemonInfo/PokemonInfo';
-import noImage from '../../../img/no-image.png';
+import PokemonImage from '../PokemonImage/PokemonImage';
 
 import styles from './Card.scss';
 
 const Card = (props) => {
-  const imgPath = props.id < 721 ? require(`../../../../pokemons/${props.id}.png`) : noImage;
+  const {id, name, catchPokemon, date, catched} = props;
   return (
-    <li className={styles.pokemons__item}>{/*TODO*/}
-      {/*<PokemonInfo />*/}
-      <img src={imgPath} className={styles.pokemons__image} alt='Pokemon avatar' onClick={props.getInfo}/>
-      <div>{ props.name }</div>
-      <CatchButton name={props.name} id={props.id} catchPokemon={props.catchPokemon} date={props.date} catched={props.catched}/>
+    <li className={styles.pokemonsItem} onClick={() => props.handleOpen(id)}>
+      <PokemonImage id={id}/>
+      <div>{name}</div>
+      <CatchButton name={name} id={id} catchPokemon={catchPokemon} date={date} catched={catched}/>
     </li>
   )
 };
