@@ -1,6 +1,13 @@
+.allPokemonsWrapper {
+  width: 1200px;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
 .pokemons {
   min-height: 35vh;
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-around;
 }

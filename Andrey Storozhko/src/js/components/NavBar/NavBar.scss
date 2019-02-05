@@ -1,14 +1,33 @@
-.header__nav {
+@import '../../../styles/environment/colors';
+
+.headerNav {
+  height: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
-  color: #fff;
+  align-items: stretch;
+  color: $wht;
 }
 
-.nav__all {
+.navAll {
   padding: 10px;
+  display: flex;
+  align-items: center;
+
+  &:hover {
+    background-color: rgba(137, 255, 253, 0.2);
+  }
 }
 
-.nav__catched {
+.navCatched {
   padding: 10px;
+  display: flex;
+  align-items: center;
+
+  &:hover {
+    background-color: rgba(137, 255, 253, 0.2);
+  }
+}
+
+.navActive {
+  box-shadow: inset 0 0 160px -20px rgba(0,0,0,0.3);
 }

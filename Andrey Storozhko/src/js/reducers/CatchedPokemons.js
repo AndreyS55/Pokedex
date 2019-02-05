@@ -4,7 +4,7 @@ import {
   FETCH_CATCHED_POKEMONS_SUCCESS,
   UNMOUNT_COMPONENT_CATCHED,
   LOAD_MORE_CATCHED
-} from "../actions/catchedPokemonsActions";
+} from '../actions/catchedPokemonsActions';
 
 const initialState = {
   catchedPokemons: [],

@@ -1,7 +1,20 @@
-.pokedex__header {
+@import '../../../styles/environment/colors';
+
+.pokedexHeader {
   display: flex;
   height: 70px;
-  background-color: #0074D9;
+  background-image: linear-gradient(to top, $blu 0%, $blu 1%, $blu 100%);
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 5px 10px -2px $gry;
+  margin: 0 0 5vh 0;
+}
+
+.headerWrapper {
+  width: 1200px;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
   justify-content: space-between;
   align-items: center;
 }

@@ -61,7 +61,7 @@ export const loadMore = () => (dispatch, getState) => {
 
 export const catchPokemon = opts => (dispatch) => {
   dispatch(postPokemonsRequest());
-  fetch(`http://localhost:3000/catched`, {
+  fetch('http://localhost:3000/catched', {
     method: 'post',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(opts)
