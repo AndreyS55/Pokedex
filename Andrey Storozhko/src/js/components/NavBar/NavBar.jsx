@@ -1,12 +1,11 @@
 import React from 'react';
-import { Link } from 'react-router-dom'
-
+import { Link, NavLink } from 'react-router-dom';
 import styles from './NavBar.scss';
 
 const NavBar = () => (
-  <nav className={styles.header__nav}>
-    <Link to='/' className={styles.nav__all}>All pokemons</Link>
-    <Link to='/catched' className={styles.nav__catched}>Catched pokemons</Link>
+  <nav className={styles.headerNav}>
+    <NavLink exact to='/' className={styles.navAll} activeClassName={styles.navActive}>All pokemons</NavLink>
+    <NavLink to='/catched' className={styles.navCatched} activeClassName={styles.navActive}>Catched pokemons</NavLink>
   </nav>
 );
 

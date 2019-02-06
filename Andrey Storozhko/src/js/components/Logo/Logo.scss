@@ -1,3 +1,16 @@
-.header__logo {
+@import '../../../styles/environment/colors';
+
+.logoTitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.headerLogo {
   height: 50px;
+}
+
+.title {
+  margin: 0 1vw;
+  color: $wht;
 }

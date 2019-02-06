@@ -4,13 +4,13 @@ import {
   FETCH_CATCHED_POKEMONS_SUCCESS,
   UNMOUNT_COMPONENT_CATCHED,
   LOAD_MORE_CATCHED
-} from "../actions/catchedPokemonsActions";
+} from '../actions/catchedPokemonsActions';
 
 const initialState = {
   catchedPokemons: [],
   isLoading: false,
   error: null,
-  limit: 50,
+  limit: 48,
   page: 1,
   haveMore: null
 };

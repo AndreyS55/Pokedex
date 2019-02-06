@@ -3,7 +3,7 @@ import {
   FETCH_SINGLE_POKEMON_REQUEST,
   FETCH_SINGLE_POKEMON_SUCCESS,
   UNMOUNT_COMPONENT_SINGLE
-} from "../actions/singlePokemonActions";
+} from '../actions/singlePokemonActions';
 
 const initialState = {
   pokemon: {},

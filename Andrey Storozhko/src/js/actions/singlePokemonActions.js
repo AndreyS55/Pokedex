@@ -17,7 +17,7 @@ const fetchSinglePokemonFailure = error => ({
   error
 });
 
-export const fetchSinglePokemon = (id) => (dispatch) => {
+export const fetchSinglePokemon = id => (dispatch) => {
   dispatch(fetchSinglePokemonRequest());
   const url = `http://localhost:3000/pokemons/${id}?_embed=catched`;
   fetch(url)

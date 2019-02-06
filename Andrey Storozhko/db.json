@@ -3800,51 +3800,99 @@
   "catched": [
     {
       "name": "bulbasaur",
-      "date": "2019-02-03T16:49:59.838Z",
+      "date": "06.02.2019",
       "pokemonId": 1,
       "id": 1
     },
     {
       "name": "ivysaur",
-      "date": "2019-02-03T17:27:27.319Z",
+      "date": "06.02.2019",
       "pokemonId": 2,
       "id": 2
     },
     {
-      "name": "venusaur",
-      "date": "2019-02-03T17:52:36.982Z",
-      "pokemonId": 3,
-      "id": 3
+      "name": "caterpie",
+      "date": "06.02.2019",
+      "pokemonId": 10,
+      "id": 10
     },
     {
-      "name": "kakuna",
-      "date": "2019-02-03T18:00:40.367Z",
-      "pokemonId": 14,
-      "id": 14
+      "name": "rattata",
+      "date": "06.02.2019",
+      "pokemonId": 19,
+      "id": 19
     },
     {
-      "name": "charmander",
-      "date": "2019-02-03T18:01:49.048Z",
-      "pokemonId": 4,
-      "id": 4
+      "name": "raticate",
+      "date": "06.02.2019",
+      "pokemonId": 20,
+      "id": 20
     },
     {
-      "name": "charmeleon",
-      "date": "2019-02-03T21:25:47.969Z",
-      "pokemonId": 5,
-      "id": 5
+      "name": "spearow",
+      "date": "06.02.2019",
+      "pokemonId": 21,
+      "id": 21
+    },
+    {
+      "name": "fearow",
+      "date": "06.02.2019",
+      "pokemonId": 22,
+      "id": 22
     },
     {
       "name": "charizard",
-      "date": "2019-02-04T18:17:33.895Z",
+      "date": "06.02.2019",
       "pokemonId": 6,
       "id": 6
     },
     {
-      "name": "wartortle",
-      "date": "2019-02-04T18:18:22.038Z",
-      "pokemonId": 8,
-      "id": 8
+      "name": "charmeleon",
+      "date": "06.02.2019",
+      "pokemonId": 5,
+      "id": 5
+    },
+    {
+      "name": "charmander",
+      "date": "06.02.2019",
+      "pokemonId": 4,
+      "id": 4
+    },
+    {
+      "name": "beedrill",
+      "date": "06.02.2019",
+      "pokemonId": 15,
+      "id": 15
+    },
+    {
+      "name": "pidgey",
+      "date": "06.02.2019",
+      "pokemonId": 16,
+      "id": 16
+    },
+    {
+      "name": "ekans",
+      "date": "06.02.2019",
+      "pokemonId": 23,
+      "id": 23
+    },
+    {
+      "name": "metapod",
+      "date": "06.02.2019",
+      "pokemonId": 11,
+      "id": 11
+    },
+    {
+      "name": "butterfree",
+      "date": "06.02.2019",
+      "pokemonId": 12,
+      "id": 12
+    },
+    {
+      "name": "pidgeotto",
+      "date": "06.02.2019",
+      "pokemonId": 17,
+      "id": 17
     }
   ]
 }

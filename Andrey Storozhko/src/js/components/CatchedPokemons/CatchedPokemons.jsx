@@ -29,22 +29,23 @@ class CatchedPokemons extends React.Component {
     }
 
     return (
-      <React.Fragment>
+      <div className={styles.catchedPokemonsWrapper}>
         <ul className={styles.catchedPokemons}>
           {catchedPokemons.map(pokemon => (
-            <Card key={pokemon.id}
-                  id={pokemon.id}
-                  name={pokemon.name}
-                  date={pokemon.date}
-                  handleOpen={this.handleOpen}
+            <Card
+              key={pokemon.id}
+              id={pokemon.id}
+              name={pokemon.name}
+              date={pokemon.date}
+              handleOpen={this.handleOpen}
             />
           ))}
         </ul>
-        { !catchedPokemons.length && !isLoading ? <h2>You have not catch any pokemon!!!</h2> : null }
-        <Preloader isLoading={isLoading}/>
-        <LoadMoreButton haveMore={haveMore} handleLoad={this.props.loadMoreCatched}/>
+        { !catchedPokemons.length && !isLoading ? <h2 className={styles.notCatched}>You have not catch any pokemon!</h2> : null }
+        <Preloader isLoading={isLoading} />
+        <LoadMoreButton haveMore={haveMore} handleLoad={this.props.loadMoreCatched} />
         {this.props.isOpen ? <PokemonInfo /> : null}
-      </React.Fragment>
+      </div>
     )
   }
 }

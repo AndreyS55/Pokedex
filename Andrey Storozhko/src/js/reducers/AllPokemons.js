@@ -10,7 +10,7 @@ const initialState = {
   pokemons: [],
   isLoading: false,
   error: null,
-  limit: 50,
+  limit: 48,
   page: 1,
   haveMore: null
 };
