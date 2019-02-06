@@ -12,7 +12,43 @@
 }
 
 .pokemon {
-  height: 70vh;
-  width: 70vw;
-  background-color: #ffffff;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+  width: 800px;
+  background: fixed url("../../../img/cardBackground.png") center no-repeat;
+  border-radius: 50px;
+}
+
+.singlePokemonImage {
+  max-width: 40%;
+}
+
+.infoText {
+  font-size: 1.8rem;
+  align-self: start;
+  padding: 20px;
+  margin: 60px 40px 0 0;
+  border-radius: 20px;
+  background-color: #FFFFFF;
+}
+
+.infoHead {
+  font-weight: bold;
+}
+
+.pokemonCloseButton {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  border: none;
+  background: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+
+  &:hover {
+    font-size: 2rem;
+  }
 }

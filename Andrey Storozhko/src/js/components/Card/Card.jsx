@@ -8,8 +8,10 @@ const Card = (props) => {
   const { id, name, catchPokemon, date, catched } = props;
   return (
     <li className={styles.pokemonsItem} onClick={() => props.handleOpen(id)}>
-      <PokemonImage id={id} />
-      <div>{name.toUpperCase()}</div>
+      <figure className={styles.pokemonImageWrapper}>
+        <PokemonImage id={id} />
+      </figure>
+      <div className={styles.cardText}>{name.toUpperCase()}</div>
       <CatchButton name={name} id={id} catchPokemon={catchPokemon} date={date} catched={catched} />
     </li>
   );

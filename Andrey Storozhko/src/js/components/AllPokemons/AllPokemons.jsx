@@ -44,7 +44,7 @@ class AllPokemons extends React.Component {
         </ul>
         <Preloader isLoading={isLoading} />
         <LoadMoreButton haveMore={haveMore} handleLoad={this.props.loadMore} />
-        {isOpen ? <PokemonInfo /> : null}
+        {isOpen ? <PokemonInfo handleOpen={this.handleOpen} /> : null}
       </div>
     );
   }

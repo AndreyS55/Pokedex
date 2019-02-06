@@ -3800,123 +3800,99 @@
   "catched": [
     {
       "name": "bulbasaur",
-      "date": "04.02.2019",
+      "date": "06.02.2019",
       "pokemonId": 1,
       "id": 1
     },
     {
-      "name": "charmander",
-      "date": "04.02.2019",
-      "pokemonId": 4,
-      "id": 4
-    },
-    {
-      "name": "squirtle",
-      "date": "04.02.2019",
-      "pokemonId": 7,
-      "id": 7
-    },
-    {
-      "name": "pidgey",
-      "date": "04.02.2019",
-      "pokemonId": 16,
-      "id": 16
-    },
-    {
-      "name": "caterpie",
-      "date": "04.02.2019",
-      "pokemonId": 10,
-      "id": 10
-    },
-    {
-      "name": "kakuna",
-      "date": "04.02.2019",
-      "pokemonId": 14,
-      "id": 14
-    },
-    {
-      "name": "charmeleon",
-      "date": "04.02.2019",
-      "pokemonId": 5,
-      "id": 5
-    },
-    {
-      "name": "venusaur",
-      "date": "04.02.2019",
-      "pokemonId": 3,
-      "id": 3
-    },
-    {
-      "name": "metapod",
-      "date": "05.02.2019",
-      "pokemonId": 11,
-      "id": 11
-    },
-    {
-      "name": "clefable",
-      "date": "05.02.2019",
-      "pokemonId": 36,
-      "id": 36
-    },
-    {
       "name": "ivysaur",
-      "date": "05.02.2019",
+      "date": "06.02.2019",
       "pokemonId": 2,
       "id": 2
     },
     {
+      "name": "caterpie",
+      "date": "06.02.2019",
+      "pokemonId": 10,
+      "id": 10
+    },
+    {
+      "name": "rattata",
+      "date": "06.02.2019",
+      "pokemonId": 19,
+      "id": 19
+    },
+    {
+      "name": "raticate",
+      "date": "06.02.2019",
+      "pokemonId": 20,
+      "id": 20
+    },
+    {
+      "name": "spearow",
+      "date": "06.02.2019",
+      "pokemonId": 21,
+      "id": 21
+    },
+    {
+      "name": "fearow",
+      "date": "06.02.2019",
+      "pokemonId": 22,
+      "id": 22
+    },
+    {
       "name": "charizard",
-      "date": "05.02.2019",
+      "date": "06.02.2019",
       "pokemonId": 6,
       "id": 6
     },
     {
-      "name": "wartortle",
-      "date": "05.02.2019",
-      "pokemonId": 8,
-      "id": 8
+      "name": "charmeleon",
+      "date": "06.02.2019",
+      "pokemonId": 5,
+      "id": 5
     },
     {
-      "name": "blastoise",
-      "date": "05.02.2019",
-      "pokemonId": 9,
-      "id": 9
-    },
-    {
-      "name": "butterfree",
-      "date": "05.02.2019",
-      "pokemonId": 12,
-      "id": 12
-    },
-    {
-      "name": "weedle",
-      "date": "05.02.2019",
-      "pokemonId": 13,
-      "id": 13
+      "name": "charmander",
+      "date": "06.02.2019",
+      "pokemonId": 4,
+      "id": 4
     },
     {
       "name": "beedrill",
-      "date": "05.02.2019",
+      "date": "06.02.2019",
       "pokemonId": 15,
       "id": 15
     },
     {
+      "name": "pidgey",
+      "date": "06.02.2019",
+      "pokemonId": 16,
+      "id": 16
+    },
+    {
+      "name": "ekans",
+      "date": "06.02.2019",
+      "pokemonId": 23,
+      "id": 23
+    },
+    {
+      "name": "metapod",
+      "date": "06.02.2019",
+      "pokemonId": 11,
+      "id": 11
+    },
+    {
+      "name": "butterfree",
+      "date": "06.02.2019",
+      "pokemonId": 12,
+      "id": 12
+    },
+    {
       "name": "pidgeotto",
-      "date": "05.02.2019",
+      "date": "06.02.2019",
       "pokemonId": 17,
       "id": 17
-    },
-    {
-      "name": "pidgeot",
-      "date": "05.02.2019",
-      "pokemonId": 18,
-      "id": 18
-    },
-    {
-      "name": "rattata",
-      "date": "05.02.2019",
-      "pokemonId": 19,
-      "id": 19
     }
   ]
 }

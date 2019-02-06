@@ -1,4 +1,8 @@
 import React from 'react';
+import PokeballOpen from '../../../img/open.png';
+import PokeballClose from '../../../img/close.png';
+
+import styles from './CatchButton.scss';
 
 class CatchButton extends React.Component {
   constructor(props) {
@@ -19,12 +23,19 @@ class CatchButton extends React.Component {
   };
 
   render() {
+    const { date, catched } = this.props;
     return (
       <button
         onClick={this.catchPokemon}
-        disabled={this.state.isDisable || this.props.date || this.props.catched.length}
+        disabled={this.state.isDisable || date || catched.length}
+        className={styles.catchButton}
       >
-        Catch!
+        <div className={styles.catchButtonText}>{this.state.isDisable || date || catched.length ? 'Catched' : 'Catch!'}</div>
+        <img
+          src={this.state.isDisable || date || catched.length ? PokeballClose : PokeballOpen}
+          className={styles.catchButtonIcon}
+          alt="Catch button icon"
+        />
       </button>
     );
   }

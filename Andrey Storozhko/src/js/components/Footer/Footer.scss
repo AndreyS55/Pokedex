@@ -2,9 +2,10 @@
 
 .pokedexFooter {
   flex: 0 0 auto;
-  height: 7vh;
-  background-image: linear-gradient(to bottom, #e8e8e8 0%, #e8e8e8 1%, #e8e8e8 100%);
-  //box-shadow: 0 0 10px 2px $gry;
+  height: 10vh;
+  background-color: $wht;
+  //background-image: linear-gradient(to bottom, #e8e8e8 0%, #e8e8e8 1%, #e8e8e8 100%);
+  border-top: 1px solid $gry;
 }
 
 .footerWrapper {
