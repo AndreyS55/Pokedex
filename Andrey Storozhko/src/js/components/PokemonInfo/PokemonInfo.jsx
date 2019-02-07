@@ -1,7 +1,5 @@
 import React from 'react';
-import { connect } from 'react-redux';
 import PokemonImage from '../PokemonImage/PokemonImage';
-import { unmountComponentSingle } from '../../actions/singlePokemonActions';
 
 import styles from './PokemonInfo.scss';
 
@@ -42,14 +40,4 @@ class PokemonInfo extends React.Component {
   }
 }
 
-const mapStateToProps = state => ({
-  pokemon: state.singlePokemon.pokemon,
-  error: state.singlePokemon.error,
-  isLoading: state.singlePokemon.isLoading
-});
-
-const mapDispatchToProps = dispatch => ({
-  unmountComponentSingle: () => dispatch(unmountComponentSingle())
-});
-
-export default connect(mapStateToProps, mapDispatchToProps)(PokemonInfo);
+export default PokemonInfo;
