@@ -23,16 +23,16 @@ class CatchButton extends React.Component {
   };
 
   render() {
-    const { date, catched } = this.props;
+    const { date, caught } = this.props;
     return (
       <button
         onClick={this.catchPokemon}
-        disabled={this.state.isDisable || date || catched.length}
+        disabled={this.state.isDisable || date || caught.length}
         className={styles.catchButton}
       >
-        <div className={styles.catchButtonText}>{this.state.isDisable || date || catched.length ? 'Catched' : 'Catch!'}</div>
+        <div className={styles.catchButtonText}>{this.state.isDisable || date || caught.length ? 'Caught' : 'Catch!'}</div>
         <img
-          src={this.state.isDisable || date || catched.length ? PokeballClose : PokeballOpen}
+          src={this.state.isDisable || date || caught.length ? PokeballClose : PokeballOpen}
           className={styles.catchButtonIcon}
           alt="Catch button icon"
         />

@@ -1,7 +1,7 @@
 @import '../../../styles/environment/mixins';
 @import '../../../styles/environment/colors';
 
-.catchedPokemonsWrapper {
+.caughtPokemonsWrapper {
   width: 1200px;
   height: 100%;
   margin: 100px auto 10px auto;
@@ -27,14 +27,14 @@
   }
 }
 
-.catchedPokemons {
+.caughtPokemons {
   width: 100%;
   min-height: 20vh;
   display: flex;
   flex-flow: row wrap;
 }
 
-.notCatched {
+.notCaught {
   align-self: center;
   justify-self: center;
   font-weight: bold;

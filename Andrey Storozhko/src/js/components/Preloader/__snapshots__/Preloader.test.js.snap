@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render a Preloader 1`] = `
+<div
+  className="preloader"
+>
+  <div
+    className="loading"
+  >
+    <div
+      className="pokeball normal"
+    />
+    <div
+      className="pokeball great"
+    />
+    <div
+      className="pokeball ultra"
+    />
+    <div
+      className="pokeball master"
+    />
+    <div
+      className="pokeball safari"
+    />
+  </div>
+</div>
+`;

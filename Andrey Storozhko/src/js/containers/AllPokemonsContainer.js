@@ -1,6 +1,11 @@
 import { connect } from 'react-redux';
 import AllPokemons from '../components/AllPokemons/AllPokemons';
-import { catchPokemon, fetchPokemons, loadMore, unmountComponent } from '../actions/allPokemonsActions';
+import {
+  catchPokemon,
+  fetchPokemons,
+  loadMore,
+  unmountComponent
+} from '../actions/allPokemonsActions';
 import { fetchSinglePokemon } from '../actions/singlePokemonActions';
 
 const mapStateToProps = state => ({
