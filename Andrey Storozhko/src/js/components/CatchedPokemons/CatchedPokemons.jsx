@@ -1,11 +1,8 @@
 import React from 'react';
-import { connect } from 'react-redux';
-import { fetchCatchedPokemons, unmountComponentCatched, loadMoreCatched } from '../../actions/catchedPokemonsActions';
-import { fetchSinglePokemon } from "../../actions/singlePokemonActions";
 import Card from '../Card/Card';
 import LoadMoreButton from '../LoadMoreButton/LoadMoreButton';
 import Preloader from '../Preloader/Preloader';
-import PokemonInfo from '../PokemonInfo/PokemonInfo';
+import PokemonInfoContainer from '../../containers/PokemonInfoContainer';
 import styles from './CatchedPokemons.scss';
 
 class CatchedPokemons extends React.Component {
@@ -44,29 +41,10 @@ class CatchedPokemons extends React.Component {
         { !catchedPokemons.length && !isLoading ? <h2 className={styles.notCatched}>You have not catch any pokemon!</h2> : null }
         <Preloader isLoading={isLoading} />
         <LoadMoreButton haveMore={haveMore} handleLoad={this.props.loadMoreCatched} />
-        {this.props.isOpen ? <PokemonInfo /> : null}
+        {this.props.isOpen ? <PokemonInfoContainer /> : null}
       </div>
     )
   }
 }
 
-const mapStateToProps = (state) => {
-  return {
-    catchedPokemons: state.catchedPokemons.catchedPokemons,
-    error: state.catchedPokemons.error,
-    isLoading: state.catchedPokemons.isLoading,
-    limit: state.catchedPokemons.limit,
-    page: state.catchedPokemons.page,
-    haveMore: state.catchedPokemons.haveMore,
-    isOpen: state.singlePokemon.isOpen
-  };
-};
-
-const mapDispatchToProps = (dispatch) => ({
-  fetchCatchedPokemons: (page, limit) => dispatch(fetchCatchedPokemons(page, limit)),
-  unmountComponentCatched: () => dispatch(unmountComponentCatched()),
-  loadMoreCatched: () => dispatch(loadMoreCatched()),
-  fetchSinglePokemon: id => dispatch(fetchSinglePokemon(id))
-});
-
-export default connect(mapStateToProps, mapDispatchToProps)(CatchedPokemons);
+export default CatchedPokemons;
