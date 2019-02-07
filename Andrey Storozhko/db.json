@@ -3800,105 +3800,39 @@
   "catched": [
     {
       "name": "bulbasaur",
-      "date": "06.02.2019",
+      "date": "07.02.2019",
       "pokemonId": 1,
       "id": 1
     },
     {
-      "name": "ivysaur",
-      "date": "06.02.2019",
-      "pokemonId": 2,
-      "id": 2
-    },
-    {
-      "name": "caterpie",
-      "date": "06.02.2019",
-      "pokemonId": 10,
-      "id": 10
-    },
-    {
-      "name": "rattata",
-      "date": "06.02.2019",
-      "pokemonId": 19,
-      "id": 19
-    },
-    {
-      "name": "raticate",
-      "date": "06.02.2019",
-      "pokemonId": 20,
-      "id": 20
-    },
-    {
-      "name": "spearow",
-      "date": "06.02.2019",
-      "pokemonId": 21,
-      "id": 21
-    },
-    {
-      "name": "fearow",
-      "date": "06.02.2019",
-      "pokemonId": 22,
-      "id": 22
-    },
-    {
-      "name": "charizard",
-      "date": "06.02.2019",
-      "pokemonId": 6,
-      "id": 6
-    },
-    {
-      "name": "charmeleon",
-      "date": "06.02.2019",
-      "pokemonId": 5,
-      "id": 5
+      "name": "squirtle",
+      "date": "07.02.2019",
+      "pokemonId": 7,
+      "id": 7
     },
     {
       "name": "charmander",
-      "date": "06.02.2019",
+      "date": "07.02.2019",
       "pokemonId": 4,
       "id": 4
     },
     {
-      "name": "beedrill",
-      "date": "06.02.2019",
-      "pokemonId": 15,
-      "id": 15
+      "name": "caterpie",
+      "date": "07.02.2019",
+      "pokemonId": 10,
+      "id": 10
     },
     {
       "name": "pidgey",
-      "date": "06.02.2019",
+      "date": "07.02.2019",
       "pokemonId": 16,
       "id": 16
     },
     {
-      "name": "ekans",
-      "date": "06.02.2019",
-      "pokemonId": 23,
-      "id": 23
-    },
-    {
-      "name": "metapod",
-      "date": "06.02.2019",
-      "pokemonId": 11,
-      "id": 11
-    },
-    {
-      "name": "butterfree",
-      "date": "06.02.2019",
-      "pokemonId": 12,
-      "id": 12
-    },
-    {
-      "name": "pidgeotto",
-      "date": "06.02.2019",
-      "pokemonId": 17,
-      "id": 17
-    },
-    {
-      "name": "weedle",
+      "name": "pikachu",
       "date": "07.02.2019",
-      "pokemonId": 13,
-      "id": 13
+      "pokemonId": 25,
+      "id": 25
     }
   ]
 }
