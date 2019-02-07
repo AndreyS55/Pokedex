@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render a Logo 1`] = `
+<Link
+  className="headerLogo"
+  replace={false}
+  to="/"
+>
+  <img
+    alt="logo"
+    className="logoIcon"
+    src="test-file-stub"
+  />
+  <h1
+    className="logoTitle"
+  >
+    Pokedex
+  </h1>
+</Link>
+`;

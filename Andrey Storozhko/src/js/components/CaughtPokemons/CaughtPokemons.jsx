@@ -3,16 +3,16 @@ import Card from '../Card/Card';
 import LoadMoreButton from '../LoadMoreButton/LoadMoreButton';
 import Preloader from '../Preloader/Preloader';
 import PokemonInfoContainer from '../../containers/PokemonInfoContainer';
-import styles from './CatchedPokemons.scss';
+import styles from './CaughtPokemons.scss';
 
-class CatchedPokemons extends React.Component {
+class CaughtPokemons extends React.Component {
   componentDidMount() {
     const { limit, page } = this.props;
-    this.props.fetchCatchedPokemons(page, limit);
+    this.props.fetchCaughtPokemons(page, limit);
   }
 
   componentWillUnmount() {
-    this.props.unmountComponentCatched();
+    this.props.unmountComponentCaught();
   }
 
   handleOpen = (id) => {
@@ -20,15 +20,15 @@ class CatchedPokemons extends React.Component {
   };
 
   render() {
-    const { error, isLoading, haveMore, catchedPokemons } = this.props;
+    const { error, isLoading, haveMore, caughtPokemons } = this.props;
     if (error) {
       return <h2>Sorry! There was an error loading the items</h2>
     }
 
     return (
-      <div className={styles.catchedPokemonsWrapper}>
-        <ul className={styles.catchedPokemons}>
-          {catchedPokemons.map(pokemon => (
+      <div className={styles.caughtPokemonsWrapper}>
+        <ul className={styles.caughtPokemons}>
+          {caughtPokemons.map(pokemon => (
             <Card
               key={pokemon.id}
               id={pokemon.id}
@@ -38,13 +38,13 @@ class CatchedPokemons extends React.Component {
             />
           ))}
         </ul>
-        { !catchedPokemons.length && !isLoading ? <h2 className={styles.notCatched}>You have not catch any pokemon!</h2> : null }
+        { !caughtPokemons.length && !isLoading ? <h2 className={styles.notCaught}>You have not catch any pokemon!</h2> : null }
         <Preloader isLoading={isLoading} />
-        <LoadMoreButton haveMore={haveMore} handleLoad={this.props.loadMoreCatched} />
+        <LoadMoreButton haveMore={haveMore} handleLoad={this.props.loadMoreCaught} />
         {this.props.isOpen ? <PokemonInfoContainer /> : null}
       </div>
     )
   }
 }
 
-export default CatchedPokemons;
+export default CaughtPokemons;

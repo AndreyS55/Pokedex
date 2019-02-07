@@ -1,7 +1,24 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should render a App 1`] = `
-<h1>
-  Hello
-</h1>
+<Provider
+  store={
+    Object {
+      "dispatch": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+      Symbol(observable): [Function],
+    }
+  }
+>
+  <HashRouter>
+    <main
+      className="pokedex"
+    >
+      <Container />
+      <Footer />
+    </main>
+  </HashRouter>
+</Provider>
 `;

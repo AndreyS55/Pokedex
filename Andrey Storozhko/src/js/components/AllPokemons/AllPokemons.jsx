@@ -34,7 +34,7 @@ class AllPokemons extends React.Component {
               id={pokemon.id}
               name={pokemon.name}
               catchPokemon={this.props.catchPokemon}
-              catched={pokemon.catched}
+              caught={pokemon.caught}
               handleOpen={this.handleOpen}
             />
           ))}

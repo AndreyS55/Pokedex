@@ -26,13 +26,13 @@ class PokemonInfo extends React.Component {
               {pokemon.name.toUpperCase()}
             </div>
             {
-              pokemon.catched.length ?
-              <div><span className={styles.infoHead}>STATUS: </span>CATCHED</div> :
-              <div><span className={styles.infoHead}>STATUS: </span>NOT CATCHED</div>
+              pokemon.caught.length ?
+              <div><span className={styles.infoHead}>STATUS: </span>CAUGHT</div> :
+              <div><span className={styles.infoHead}>STATUS: </span>NOT CAUGHT</div>
             }
             {
-              pokemon.catched.length ?
-              <div><span className={styles.infoHead}>CATCH DATE: </span>{pokemon.catched[0].date}</div> :
+              pokemon.caught.length ?
+              <div><span className={styles.infoHead}>CATCH DATE: </span>{pokemon.caught[0].date}</div> :
               null
             }
           </div>

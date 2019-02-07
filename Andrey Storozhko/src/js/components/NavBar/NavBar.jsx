@@ -1,5 +1,5 @@
 import React from 'react';
-import {NavLink} from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import classNames from 'classnames';
 import styles from './NavBar.scss';
 
@@ -24,10 +24,10 @@ class NavBar extends React.Component {
           >
             All pokemons
           </NavLink>
-          <NavLink to='/catched' className={classNames(styles.navCatched, {[styles.responsive]: this.state.isOpen})}
+          <NavLink to='/caught' className={classNames(styles.navCaught, {[styles.responsive]: this.state.isOpen})}
                    activeClassName={styles.navActive}
           >
-            Catched pokemons
+            Caught pokemons
           </NavLink>
         </nav>
         <button className={styles.navIcon} onClick={this.handleOpen}>&#9776;</button>

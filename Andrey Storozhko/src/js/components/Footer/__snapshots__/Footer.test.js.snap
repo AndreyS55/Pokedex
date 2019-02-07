@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render a Footer 1`] = `
+<footer
+  className="pokedexFooter"
+>
+  <div
+    className="footerWrapper"
+  >
+    <div
+      className="footerText"
+    >
+      This App was made for EPAM Training
+    </div>
+    <WithStyles(Button)
+      color="default"
+      href="https://github.com/AndreyS55/Pokedex"
+      size="small"
+      variant="contained"
+    >
+      GitHub
+    </WithStyles(Button)>
+  </div>
+</footer>
+`;
