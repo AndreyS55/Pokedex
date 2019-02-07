@@ -4,9 +4,9 @@ import logo from '../../../img/Logo.png';
 import styles from './Logo.scss';
 
 const Logo = () => (
-  <Link to='/' className={styles.logoTitle}>
-    <img src={logo} className={styles.headerLogo} alt='logo' />
-    <h1 className={styles.title}>Pokedex</h1>
+  <Link to='/' className={styles.headerLogo}>
+    <img src={logo} className={styles.logoIcon} alt='logo' />
+    <h1 className={styles.logoTitle}>Pokedex</h1>
   </Link>
 );
 

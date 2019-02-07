@@ -1,16 +1,17 @@
 @import '../../../styles/environment/colors';
 
-.logoTitle {
+.headerLogo {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.headerLogo {
+.logoIcon {
   height: 50px;
+  margin-left: 15px;
 }
 
-.title {
-  margin: 0 1vw;
+.logoTitle {
+  margin-left: 15px;
   color: $wht;
 }

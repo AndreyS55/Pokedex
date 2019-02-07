@@ -1,6 +1,16 @@
+@import '../../../styles/environment/mixins';
+
 .pokedexContainer {
   flex: 1 0 auto;
   display: flex;
   flex-direction: column;
   background: fixed url("../../../img/mainBackground.png") center no-repeat;
+
+  @include tablets() {
+    background: #e8e8e8;
+  }
+
+  @include phones() {
+    background: #e8e8e8;
+  }
 }

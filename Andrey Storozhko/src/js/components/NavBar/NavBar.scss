@@ -1,4 +1,5 @@
 @import '../../../styles/environment/colors';
+@import '../../../styles/environment/mixins';
 
 .headerNav {
   height: 100%;
@@ -6,15 +7,48 @@
   flex-direction: row;
   align-items: stretch;
   color: $wht;
+
+  @include tablets() {
+    display: none;
+  }
+
+  @include phones() {
+    display: none;
+  }
+}
+
+.navIsOpen {
+  @include tablets() {
+    display: block;
+    width: 100%;
+  }
+
+  @include phones() {
+    display: block;
+    width: 100%;
+  }
 }
 
 .navAll {
   padding: 10px;
   display: flex;
   align-items: center;
+  background-image: linear-gradient(to top, $blu 0%, $blu 1%, $blu 100%);
 
   &:hover {
     background-color: rgba(137, 255, 253, 0.2);
+  }
+
+  @include tablets() {
+    display: block;
+    width: 100vw;
+    padding: 15px;
+  }
+
+  @include phones() {
+    display: block;
+    width: 100vw;
+    padding: 15px;
   }
 }
 
@@ -22,12 +56,54 @@
   padding: 10px;
   display: flex;
   align-items: center;
+  background-image: linear-gradient(to top, $blu 0%, $blu 1%, $blu 100%);
 
   &:hover {
     background-color: rgba(137, 255, 253, 0.2);
+  }
+
+  @include tablets() {
+    display: block;
+    width: 100vw;
+    padding: 15px;
+  }
+
+  @include phones() {
+    display: block;
+    width: 100vw;
+    padding: 15px;
   }
 }
 
 .navActive {
   box-shadow: inset 0 0 160px -20px rgba(0,0,0,0.3);
+}
+
+.navIcon {
+  border: none;
+  background: none;
+  color: $wht;
+  align-self: center;
+  display: none;
+  font-size: 2rem;
+
+  @include tablets() {
+    position: absolute;
+    display: block;
+    top: 18px;
+    right: 25px;
+  }
+
+  @include phones() {
+    position: absolute;
+    display: flex;
+    top: 18px;
+    right: 25px;
+  }
+}
+
+.responsive {
+   position: relative;
+   top: 69px;
+   left: -203px;
 }

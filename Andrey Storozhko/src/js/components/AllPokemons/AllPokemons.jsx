@@ -22,7 +22,7 @@ class AllPokemons extends React.Component {
   render() {
     const { error, isLoading, haveMore, pokemons, isOpen } = this.props;
     if (error) {
-      return <h2>Sorry! There was an error loading the items</h2>;
+      return <h2 className={styles.allPokemonsError}>Sorry! There was an error loading the items</h2>;
     }
 
     return (
