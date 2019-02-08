@@ -7,6 +7,8 @@ export const POST_POKEMONS_REQUEST = 'POST_POKEMONS_REQUEST';
 export const POST_POKEMONS_SUCCESS = 'POST_POKEMONS_SUCCESS';
 export const POST_POKEMONS_FAILURE = 'POST_POKEMONS_FAILURE';
 
+const API_URL = 'http://localhost:3000';
+
 const fetchPokemonsRequest = () => ({
   type: FETCH_POKEMONS_REQUEST
 });
@@ -37,7 +39,7 @@ const postPokemonsFailure = error => ({
 
 export const fetchPokemons = (page, limit) => (dispatch) => {
   dispatch(fetchPokemonsRequest());
-  const url = `http://localhost:3000/pokemons?_embed=caught&_page=${page}&_limit=${limit}`;
+  const url = `${API_URL}/pokemons?_embed=caught&_page=${page}&_limit=${limit}`;
   fetch(url)
     .then((response) => {
       if (!response.ok) {
@@ -61,7 +63,7 @@ export const loadMore = () => (dispatch, getState) => {
 
 export const catchPokemon = opts => (dispatch) => {
   dispatch(postPokemonsRequest());
-  fetch('http://localhost:3000/caught', {
+  fetch(`${API_URL}/caught`, {
     method: 'post',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(opts)

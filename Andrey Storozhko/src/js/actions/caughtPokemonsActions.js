@@ -4,6 +4,8 @@ export const FETCH_CAUGHT_POKEMONS_FAILURE = 'FETCH_CAUGHT_POKEMONS_FAILURE';
 export const UNMOUNT_COMPONENT_CAUGHT = 'UNMOUNT_COMPONENT_CAUGHT';
 export const LOAD_MORE_CAUGHT = 'LOAD_MORE_CAUGHT';
 
+const API_URL = 'http://localhost:3000';
+
 const fetchCaughtPokemonsRequest = () => ({
   type: FETCH_CAUGHT_POKEMONS_REQUEST
 });
@@ -20,7 +22,7 @@ const fetchCaughtPokemonsFailure = error => ({
 
 export const fetchCaughtPokemons = (page, limit) => (dispatch) => {
   dispatch(fetchCaughtPokemonsRequest());
-  const url = `http://localhost:3000/caught?_page=${page}&_limit=${limit}`;
+  const url = `${API_URL}/caught?_page=${page}&_limit=${limit}`;
   fetch(url)
     .then((response) => {
       if (!response.ok) {

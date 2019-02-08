@@ -91,12 +91,13 @@
 
 .pokemonCloseButton {
   position: absolute;
-  top: 20px;
-  right: 20px;
+  top: 30px;
+  right: 30px;
   border: none;
   background: none;
   font-size: 1.5rem;
   cursor: pointer;
+  transform: translate(50%, -50%);
 
   &:hover {
     font-size: 2rem;

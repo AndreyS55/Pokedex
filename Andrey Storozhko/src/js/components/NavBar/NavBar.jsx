@@ -21,11 +21,13 @@ class NavBar extends React.Component {
         <nav className={classNames(styles.headerNav, {[styles.navIsOpen]: this.state.isOpen})}>
           <NavLink exact to='/' className={classNames(styles.navAll, {[styles.responsive]: this.state.isOpen})}
                    activeClassName={styles.navActive}
+                   onClick={this.state.isOpen ? this.handleOpen : null}
           >
             All pokemons
           </NavLink>
           <NavLink to='/caught' className={classNames(styles.navCaught, {[styles.responsive]: this.state.isOpen})}
                    activeClassName={styles.navActive}
+                   onClick={this.state.isOpen ? this.handleOpen : null}
           >
             Caught pokemons
           </NavLink>

@@ -28,7 +28,7 @@ class AllPokemons extends React.Component {
     return (
       <div className={styles.allPokemonsWrapper}>
         <ul className={styles.pokemons}>
-          {pokemons.map(pokemon => (
+          {Array.isArray(pokemons) && pokemons.map(pokemon => (
             <Card
               key={pokemon.id}
               id={pokemon.id}

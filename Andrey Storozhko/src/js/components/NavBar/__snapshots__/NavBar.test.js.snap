@@ -10,6 +10,7 @@ exports[`should render a NavBar 1`] = `
       aria-current="page"
       className="navAll"
       exact={true}
+      onClick={null}
       to="/"
     >
       All pokemons
@@ -18,6 +19,7 @@ exports[`should render a NavBar 1`] = `
       activeClassName="navActive"
       aria-current="page"
       className="navCaught"
+      onClick={null}
       to="/caught"
     >
       Caught pokemons

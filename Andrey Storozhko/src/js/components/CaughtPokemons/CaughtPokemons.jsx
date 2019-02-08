@@ -28,7 +28,7 @@ class CaughtPokemons extends React.Component {
     return (
       <div className={styles.caughtPokemonsWrapper}>
         <ul className={styles.caughtPokemons}>
-          {caughtPokemons.map(pokemon => (
+          {Array.isArray(caughtPokemons) && caughtPokemons.map(pokemon => (
             <Card
               key={pokemon.id}
               id={pokemon.id}
