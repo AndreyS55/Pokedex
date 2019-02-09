@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render a CatchButton 1`] = `
+<button
+  className="catchButton"
+  disabled={1}
+  onClick={[Function]}
+>
+  <div>
+    Caught
+  </div>
+  <img
+    alt="Catch button icon"
+    className="catchButtonIcon"
+    src="test-file-stub"
+  />
+</button>
+`;

@@ -3796,5 +3796,121 @@
       "name": "magearna-original",
       "id": 10147
     }
+  ],
+  "caught": [
+    {
+      "name": "bulbasaur",
+      "date": "08.02.2019",
+      "pokemonId": 1,
+      "id": 1
+    },
+    {
+      "name": "squirtle",
+      "date": "08.02.2019",
+      "pokemonId": 7,
+      "id": 7
+    },
+    {
+      "name": "pikachu",
+      "date": "08.02.2019",
+      "pokemonId": 25,
+      "id": 25
+    },
+    {
+      "name": "charmander",
+      "date": "08.02.2019",
+      "pokemonId": 4,
+      "id": 4
+    },
+    {
+      "name": "caterpie",
+      "date": "08.02.2019",
+      "pokemonId": 10,
+      "id": 10
+    },
+    {
+      "name": "pidgey",
+      "date": "08.02.2019",
+      "pokemonId": 16,
+      "id": 16
+    },
+    {
+      "name": "jigglypuff",
+      "date": "08.02.2019",
+      "pokemonId": 39,
+      "id": 39
+    },
+    {
+      "name": "paras",
+      "date": "08.02.2019",
+      "pokemonId": 46,
+      "id": 46
+    },
+    {
+      "name": "abra",
+      "date": "08.02.2019",
+      "pokemonId": 63,
+      "id": 63
+    },
+    {
+      "name": "bellsprout",
+      "date": "08.02.2019",
+      "pokemonId": 69,
+      "id": 69
+    },
+    {
+      "name": "slowpoke",
+      "date": "08.02.2019",
+      "pokemonId": 79,
+      "id": 79
+    },
+    {
+      "name": "seel",
+      "date": "08.02.2019",
+      "pokemonId": 86,
+      "id": 86
+    },
+    {
+      "name": "metapod",
+      "date": "08.02.2019",
+      "pokemonId": 11,
+      "id": 11
+    },
+    {
+      "name": "charizard",
+      "date": "09.02.2019",
+      "pokemonId": 6,
+      "id": 6
+    },
+    {
+      "name": "weedle",
+      "date": "09.02.2019",
+      "pokemonId": 13,
+      "id": 13
+    },
+    {
+      "name": "nidorino",
+      "date": "09.02.2019",
+      "pokemonId": 33,
+      "id": 33
+    },
+    {
+      "name": "venusaur",
+      "date": "09.02.2019",
+      "pokemonId": 3,
+      "id": 3
+    },
+    {
+      "name": "spearow",
+      "date": "09.02.2019",
+      "pokemonId": 21,
+      "id": 21
+    },
+    {
+      "name": "nidoking",
+      "date": "09.02.2019",
+      "pokemonId": 34,
+      "id": 34
+    }
   ]
 }

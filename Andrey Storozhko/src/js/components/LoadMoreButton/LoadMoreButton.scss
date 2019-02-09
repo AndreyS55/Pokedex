@@ -1,0 +1,36 @@
+@import '../../../styles/environment/colors';
+@import '../../../styles/environment/mixins';
+
+.loadMore {
+  border: 1px solid seagreen;
+  border-radius: 5px;
+  align-self: center;
+  margin: 10px 0 20px 0;
+  width: 100%;
+  cursor: pointer;
+  color: #FFFFFF;
+  font-weight: 500;
+  padding: 10px;
+  background-image: linear-gradient(to top, #00B105 0%, #00B105 1%, #00B105 100%);
+  box-shadow: 0 10px 14px -7px #667860;
+
+  &:hover {
+    border: 1px solid #8b5f23;
+    background: rgb(255, 175, 17);
+  }
+
+  &:active {
+    position: relative;
+    top: 1px;
+  }
+
+  @include tablets() {
+    margin: 0;
+    border-radius: 0;
+  }
+
+  @include phones() {
+    margin: 0;
+    border-radius: 0;
+  }
+}

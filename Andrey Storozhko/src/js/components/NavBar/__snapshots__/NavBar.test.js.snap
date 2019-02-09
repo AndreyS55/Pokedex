@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render a NavBar 1`] = `
+<Fragment>
+  <nav
+    className="headerNav"
+  >
+    <NavLink
+      activeClassName="navActive"
+      aria-current="page"
+      className="navAll"
+      exact={true}
+      onClick={null}
+      to="/"
+    >
+      All pokemons
+    </NavLink>
+    <NavLink
+      activeClassName="navActive"
+      aria-current="page"
+      className="navCaught"
+      onClick={null}
+      to="/caught"
+    >
+      Caught pokemons
+    </NavLink>
+  </nav>
+  <button
+    className="navIcon"
+    onClick={[Function]}
+  >
+    ☰
+  </button>
+</Fragment>
+`;

@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render a PokemonInfo 1`] = `
+<div
+  className="pokemonInfo"
+>
+  <div
+    className="pokemon"
+  >
+    <figure
+      className="singlePokemonImage"
+    >
+      <PokemonImage
+        id={1}
+      />
+    </figure>
+    <div
+      className="infoText"
+    >
+      <div>
+        <span
+          className="infoHead"
+        >
+          ID: 
+        </span>
+        1
+      </div>
+      <div>
+        <span
+          className="infoHead"
+        >
+          NAME: 
+        </span>
+        BULBASAUR
+      </div>
+      <div>
+        <span
+          className="infoHead"
+        >
+          STATUS: 
+        </span>
+        CAUGHT
+      </div>
+      <div>
+        <span
+          className="infoHead"
+        >
+          CATCH DATE: 
+        </span>
+        08.02.2019
+      </div>
+    </div>
+    <button
+      className="pokemonCloseButton"
+      onClick={[Function]}
+    >
+      ❌
+    </button>
+  </div>
+</div>
+`;

@@ -1,0 +1,55 @@
+@import '../../../styles/environment/mixins';
+
+.pokemonsItem {
+  width: calc(100%/6);
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid black;
+  border-top: 1px solid black;
+  border-left: 1px solid black;
+  margin-top: -1px;
+  margin-left: -1px;
+  background-color: white;
+
+  &:hover {
+    box-shadow: inset 0 0 80px -20px rgba(0, 0, 0, 0.5);
+  }
+
+  @include desktop() {
+    width: calc(100%/6);
+  }
+
+  @include laptop() {
+    width: calc(100%/5);
+  }
+
+  @include tablets() {
+    width: calc(100%/2);
+    margin-top: 0;
+    margin-left: 0;
+  }
+
+  @include phones() {
+    width: 100%;
+    margin-top: 0;
+    margin-left: 0;
+  }
+}
+
+.pokemonImageWrapper {
+  max-width: 90%;
+
+  @include tablets() {
+    max-width: 80%;
+  }
+
+  @include phones() {
+    max-width: 80%;
+  }
+}
+
+.cardText {
+  padding: 5px 0;
+}

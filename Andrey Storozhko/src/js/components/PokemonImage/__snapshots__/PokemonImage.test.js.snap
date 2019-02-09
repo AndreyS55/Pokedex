@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render a PokemonImage 1`] = `
+<img
+  alt="Pokemon avatar"
+  className="pokemonImage"
+  src="test-file-stub"
+/>
+`;

@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render a Card with Pikachu 1`] = `
+<li
+  className="pokemonsItem"
+  onClick={[Function]}
+>
+  <figure
+    className="pokemonImageWrapper"
+  >
+    <PokemonImage />
+  </figure>
+  <div
+    className="cardText"
+  >
+    PIKACHU
+  </div>
+  <CatchButton
+    name="pikachu"
+  />
+</li>
+`;
