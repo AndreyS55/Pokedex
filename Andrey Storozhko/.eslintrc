@@ -15,7 +15,8 @@
     "object-curly-spacing": ["error", "always"],
     "linebreak-style": ["error", "windows"],
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
-    "import/no-extraneous-dependencies": ["error", {"devDependencies": true}]
+    "import/no-extraneous-dependencies": ["error", {"devDependencies": true}],
+    "react/prop-types": 0
   },
   "env": {
     "es6": true,

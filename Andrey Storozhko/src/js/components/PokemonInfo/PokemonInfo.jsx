@@ -1,11 +1,11 @@
 import React from 'react';
 import PokemonImage from '../PokemonImage/PokemonImage';
-
 import styles from './PokemonInfo.scss';
 
 class PokemonInfo extends React.Component {
   handleClose = () => {
-    this.props.unmountComponentSingle();
+    const { unmountComponentSingle } = this.props;
+    unmountComponentSingle();
   };
 
   render() {
@@ -26,14 +26,20 @@ class PokemonInfo extends React.Component {
               {pokemon.name.toUpperCase()}
             </div>
             {
-              pokemon.caught.length ?
-              <div><span className={styles.infoHead}>STATUS: </span>CAUGHT</div> :
-              <div><span className={styles.infoHead}>STATUS: </span>NOT CAUGHT</div>
+              pokemon.caught.length
+                ? <div>
+                    <span className={styles.infoHead}>STATUS: </span>
+                    CAUGHT
+                  </div>
+                : <div><span className={styles.infoHead}>STATUS: </span>NOT CAUGHT</div>
             }
             {
-              pokemon.caught.length ?
-              <div><span className={styles.infoHead}>CATCH DATE: </span>{pokemon.caught[0].date}</div> :
-              null
+              pokemon.caught.length
+                ? <div>
+                    <span className={styles.infoHead}>CATCH DATE: </span>
+                    {pokemon.caught[0].date}
+                  </div>
+                : null
             }
           </div>
           <button onClick={this.handleClose} className={styles.pokemonCloseButton}>&#10060;</button>

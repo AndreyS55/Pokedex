@@ -1,7 +1,6 @@
 import React from 'react';
 import PokeballOpen from '../../../img/open.png';
 import PokeballClose from '../../../img/close.png';
-
 import styles from './CatchButton.scss';
 
 class CatchButton extends React.Component {
@@ -13,26 +12,29 @@ class CatchButton extends React.Component {
   }
 
   catchPokemon = (e) => {
+    const { catchPokemon, name, id } = this.props;
+    const { isDisable } = this.state;
     e.stopPropagation();
-    this.setState({ isDisable: !this.state.isDisable }, this.props.catchPokemon({
-      name: this.props.name,
+    this.setState({ isDisable: !isDisable }, catchPokemon({
+      name,
       date: new Date().toLocaleDateString(),
-      pokemonId: this.props.id,
-      id: this.props.id
+      pokemonId: id,
+      id
     }));
   };
 
   render() {
     const { date, caught } = this.props;
+    const { isDisable } = this.state;
     return (
       <button
         onClick={this.catchPokemon}
-        disabled={this.state.isDisable || date || caught.length}
+        disabled={isDisable || date || caught.length}
         className={styles.catchButton}
       >
-        <div className={styles.catchButtonText}>{this.state.isDisable || date || caught.length ? 'Caught' : 'Catch!'}</div>
+        <div>{isDisable || date || caught.length ? 'Caught' : 'Catch!'}</div>
         <img
-          src={this.state.isDisable || date || caught.length ? PokeballClose : PokeballOpen}
+          src={isDisable || date || caught.length ? PokeballClose : PokeballOpen}
           className={styles.catchButtonIcon}
           alt="Catch button icon"
         />
