@@ -7,7 +7,7 @@ import './main.scss';
 const renderApp = () => ReactDOM.render(<App />, document.getElementById('root'));
 
 if (process.env.NODE_ENV !== 'production' && module.hot) {
-  module.hot.accept('./js/components/App/App', renderApp)
+  module.hot.accept('./js/components/App/App', renderApp);
 }
 
 renderApp();

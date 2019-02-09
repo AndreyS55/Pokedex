@@ -3875,6 +3875,42 @@
       "date": "08.02.2019",
       "pokemonId": 11,
       "id": 11
+    },
+    {
+      "name": "charizard",
+      "date": "09.02.2019",
+      "pokemonId": 6,
+      "id": 6
+    },
+    {
+      "name": "weedle",
+      "date": "09.02.2019",
+      "pokemonId": 13,
+      "id": 13
+    },
+    {
+      "name": "nidorino",
+      "date": "09.02.2019",
+      "pokemonId": 33,
+      "id": 33
+    },
+    {
+      "name": "venusaur",
+      "date": "09.02.2019",
+      "pokemonId": 3,
+      "id": 3
+    },
+    {
+      "name": "spearow",
+      "date": "09.02.2019",
+      "pokemonId": 21,
+      "id": 21
+    },
+    {
+      "name": "nidoking",
+      "date": "09.02.2019",
+      "pokemonId": 34,
+      "id": 34
     }
   ]
 }

@@ -3,7 +3,6 @@ import { Route, Switch } from 'react-router-dom';
 import Header from '../Header/Header';
 import AllPokemonsContainer from '../../containers/AllPokemonsContainer';
 import CaughtPokemonsContainer from '../../containers/CaughtPokemonsContainer';
-
 import styles from './Container.scss';
 
 const Container = () => (

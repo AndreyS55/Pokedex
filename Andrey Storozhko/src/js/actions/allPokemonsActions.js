@@ -40,7 +40,7 @@ const postPokemonsFailure = error => ({
 export const fetchPokemons = (page, limit) => (dispatch) => {
   dispatch(fetchPokemonsRequest());
   const url = `${API_URL}/pokemons?_embed=caught&_page=${page}&_limit=${limit}`;
-  fetch(url)
+  return fetch(url)
     .then((response) => {
       if (!response.ok) {
         throw new Error(response.statusText);

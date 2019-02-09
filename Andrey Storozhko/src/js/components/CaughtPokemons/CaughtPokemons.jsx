@@ -7,22 +7,26 @@ import styles from './CaughtPokemons.scss';
 
 class CaughtPokemons extends React.Component {
   componentDidMount() {
-    const { limit, page } = this.props;
-    this.props.fetchCaughtPokemons(page, limit);
+    const { limit, page, fetchCaughtPokemons } = this.props;
+    fetchCaughtPokemons(page, limit);
   }
 
   componentWillUnmount() {
-    this.props.unmountComponentCaught();
+    const { unmountComponentCaught } = this.props;
+    unmountComponentCaught();
   }
 
   handleOpen = (id) => {
-    this.props.fetchSinglePokemon(id)
+    const { fetchSinglePokemon } = this.props;
+    fetchSinglePokemon(id);
   };
 
   render() {
-    const { error, isLoading, haveMore, caughtPokemons } = this.props;
+    const {
+      error, isLoading, haveMore, caughtPokemons, loadMoreCaught, isOpen
+    } = this.props;
     if (error) {
-      return <h2>Sorry! There was an error loading the items</h2>
+      return <h2>Sorry! There was an error loading the items</h2>;
     }
 
     return (
@@ -38,12 +42,14 @@ class CaughtPokemons extends React.Component {
             />
           ))}
         </ul>
-        { !caughtPokemons.length && !isLoading ? <h2 className={styles.notCaught}>You have not catch any pokemon!</h2> : null }
+        {!caughtPokemons.length && !isLoading
+          ? <h2 className={styles.notCaught}>You have not catch any pokemon!</h2>
+          : null}
         <Preloader isLoading={isLoading} />
-        <LoadMoreButton haveMore={haveMore} handleLoad={this.props.loadMoreCaught} />
-        {this.props.isOpen ? <PokemonInfoContainer /> : null}
+        <LoadMoreButton haveMore={haveMore} handleLoad={loadMoreCaught} />
+        {isOpen ? <PokemonInfoContainer /> : null}
       </div>
-    )
+    );
   }
 }
 

@@ -8,26 +8,32 @@ class NavBar extends React.Component {
     super(props);
     this.state = {
       isOpen: false
-    }
+    };
   }
 
   handleOpen = () => {
-    this.setState({isOpen: !this.state.isOpen})
+    const { isOpen } = this.state;
+    this.setState({ isOpen: !isOpen });
   };
 
-  render () {
+  render() {
+    const { isOpen } = this.state;
     return (
       <React.Fragment>
-        <nav className={classNames(styles.headerNav, {[styles.navIsOpen]: this.state.isOpen})}>
-          <NavLink exact to='/' className={classNames(styles.navAll, {[styles.responsive]: this.state.isOpen})}
-                   activeClassName={styles.navActive}
-                   onClick={this.state.isOpen ? this.handleOpen : null}
+        <nav className={classNames(styles.headerNav, { [styles.navIsOpen]: isOpen })}>
+          <NavLink
+            exact to="/"
+            className={classNames(styles.navAll, { [styles.responsive]: isOpen })}
+            activeClassName={styles.navActive}
+            onClick={isOpen ? this.handleOpen : null}
           >
             All pokemons
           </NavLink>
-          <NavLink to='/caught' className={classNames(styles.navCaught, {[styles.responsive]: this.state.isOpen})}
-                   activeClassName={styles.navActive}
-                   onClick={this.state.isOpen ? this.handleOpen : null}
+          <NavLink
+            to="/caught"
+            className={classNames(styles.navCaught, { [styles.responsive]: isOpen })}
+            activeClassName={styles.navActive}
+            onClick={isOpen ? this.handleOpen : null}
           >
             Caught pokemons
           </NavLink>

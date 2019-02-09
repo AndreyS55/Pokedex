@@ -7,10 +7,10 @@ const Footer = () => (
     <div className={styles.footerWrapper}>
       <div className={styles.footerText}>This App was made for EPAM Training</div>
       <Button
-        href='https://github.com/AndreyS55/Pokedex'
-        size='small'
-        color='default'
-        variant='contained'
+        href="https://github.com/AndreyS55/Pokedex"
+        size="small"
+        color="default"
+        variant="contained"
       >
         GitHub
       </Button>

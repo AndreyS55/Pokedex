@@ -6,9 +6,7 @@ exports[`should render a CatchButton 1`] = `
   disabled={1}
   onClick={[Function]}
 >
-  <div
-    className="catchButtonText"
-  >
+  <div>
     Caught
   </div>
   <img

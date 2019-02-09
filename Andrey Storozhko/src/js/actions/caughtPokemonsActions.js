@@ -23,7 +23,7 @@ const fetchCaughtPokemonsFailure = error => ({
 export const fetchCaughtPokemons = (page, limit) => (dispatch) => {
   dispatch(fetchCaughtPokemonsRequest());
   const url = `${API_URL}/caught?_page=${page}&_limit=${limit}`;
-  fetch(url)
+  return fetch(url)
     .then((response) => {
       if (!response.ok) {
         throw new Error(response.statusText);
