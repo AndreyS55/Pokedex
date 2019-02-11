@@ -7,7 +7,7 @@
     "test": "jest --color --coverage",
     "lint": "./node_modules/.bin/eslint src",
     "start": "concurrently \"json-server --watch db.json\" \"webpack-dev-server --mode=development -w\"",
-    "build": "webpack --mode=production -w"
+    "build": "webpack --mode=production"
   },
   "author": "Andrey Storozhko",
   "license": "ISC",

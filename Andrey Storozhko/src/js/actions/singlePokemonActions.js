@@ -3,7 +3,7 @@ export const FETCH_SINGLE_POKEMON_SUCCESS = 'FETCH_SINGLE_POKEMON_SUCCESS';
 export const FETCH_SINGLE_POKEMON_FAILURE = 'FETCH_SINGLE_POKEMON_FAILURE';
 export const UNMOUNT_COMPONENT_SINGLE = 'UNMOUNT_COMPONENT_SINGLE';
 
-const API_URL = 'http://localhost:3000';
+const API_URL = process.env.NODE_ENV === 'production' ? 'http://13.53.214.211:3000' : 'http://localhost:3000';
 
 const fetchSinglePokemonRequest = () => ({
   type: FETCH_SINGLE_POKEMON_REQUEST

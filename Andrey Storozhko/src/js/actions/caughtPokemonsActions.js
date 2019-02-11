@@ -4,7 +4,7 @@ export const FETCH_CAUGHT_POKEMONS_FAILURE = 'FETCH_CAUGHT_POKEMONS_FAILURE';
 export const UNMOUNT_COMPONENT_CAUGHT = 'UNMOUNT_COMPONENT_CAUGHT';
 export const LOAD_MORE_CAUGHT = 'LOAD_MORE_CAUGHT';
 
-const API_URL = 'http://localhost:3000';
+const API_URL = process.env.NODE_ENV === 'production' ? 'http://13.53.214.211:3000' : 'http://localhost:3000';
 
 const fetchCaughtPokemonsRequest = () => ({
   type: FETCH_CAUGHT_POKEMONS_REQUEST
