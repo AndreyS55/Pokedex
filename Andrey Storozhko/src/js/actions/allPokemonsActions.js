@@ -7,7 +7,7 @@ export const POST_POKEMONS_REQUEST = 'POST_POKEMONS_REQUEST';
 export const POST_POKEMONS_SUCCESS = 'POST_POKEMONS_SUCCESS';
 export const POST_POKEMONS_FAILURE = 'POST_POKEMONS_FAILURE';
 
-const API_URL = 'http://localhost:3000';
+const API_URL = process.env.NODE_ENV === 'production' ? 'http://13.53.214.211:3000' : 'http://localhost:3000';
 
 const fetchPokemonsRequest = () => ({
   type: FETCH_POKEMONS_REQUEST
